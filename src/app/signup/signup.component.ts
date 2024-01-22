@@ -1,4 +1,8 @@
 import { Component, OnInit,SimpleChange,OnChanges,Input, SimpleChanges } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { SignUp } from '../sign-up';
+import { JsonPipe } from '@angular/common';
+
 
 @Component({
   selector: 'app-signup',
@@ -41,5 +45,12 @@ export class SignupComponent implements OnChanges {
 // Attribute Binding
 textColor='red';
 
+
+signupModel= new SignUp('','');
+
+onSubmit():void{
+
+  alert(this.signupModel.name + '\n' +this.signupModel.password);
+}
 
 }

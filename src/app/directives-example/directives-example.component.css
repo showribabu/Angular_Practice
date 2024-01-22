@@ -1,0 +1,29 @@
+.special
+{
+  background-color:red;
+  color:white;
+  padding:10px;
+  box-shadow:2px 5px 10px black;
+  border-right:blue 5px solid;
+
+}
+
+.special1
+{
+  background-color:yellow;
+  color:white;
+  padding:10px;
+  box-shadow:2px 5px 10px black;
+  border-right:blue 5px solid;
+
+}
+
+.special2
+{
+  background-color:green;
+  color:white;
+  padding:10px;
+  box-shadow:2px 5px 10px black;
+  border-right:blue 5px solid;
+
+}

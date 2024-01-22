@@ -5,16 +5,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 import { TestComponent } from './test/test.component';
+import { FormsModule } from '@angular/forms';
+import { DirectivesExampleComponent } from './directives-example/directives-example.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     TestComponent,
+    DirectivesExampleComponent,
+    HighlightDirective,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
+
+
   ],
 
   providers: [],

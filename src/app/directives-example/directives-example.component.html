@@ -1,0 +1,82 @@
+<div class="container-fluid p-3 bg-primary text-white">
+  <h2>Directives</h2>
+</div>
+
+<div class="container mt-5">
+  <h3 class="p-3 bg-dark text-white">Structrual Directives</h3>
+
+  <div class="row border border-primary bg-warning">
+
+    <div class="col border-end border-end-white">
+      <h1>*ngIF</h1>
+      <div *ngIf="isvalid; else elseBlock">
+        <p class=" p-3  text-danger">True</p>
+      </div>
+      <ng-template #elseBlock>
+        <p class="bg-dark text-warning">False</p>
+      </ng-template>
+    </div>
+
+    <div class="col  border-end border-end-white">
+      <h1>*ngFor</h1>
+      <ul>
+        <li  *ngFor="let i of data">
+          {{i}}
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="col">
+      <h1>ngSwitch</h1>
+      <div [ngSwitch]="value">
+        <div  *ngSwitchCase="'a'">A</div>
+        <div  *ngSwitchCase="'b'">B</div>
+        <div  *ngSwitchCase="'c'">C</div>
+        <div *ngSwitchDefault>
+          Default
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- toggle the "special" class on/off with a property -->
+
+<div class="container mt-5">
+  <h3 class="p-3 bg-dark text-white">Attribute Directives</h3>
+
+  <div class="row border border-primary bg-warning">
+
+    <div class="col border-end border-end-white">
+      <h1>ngClass</h1>
+      <div [ngClass]="{'special':isSpecial,'special1':isSpecial1}">This div is special</div>
+
+      <div [ngClass]="{'special1':'ture' , 'special2': 'false'}">Conditional classes</div>
+
+    </div>
+
+    <div class="col  border-end border-end-white">
+      <h1>ngStyle</h1>
+      <div [ngStyle]="{'font-size':'20px','font-weight':'bold'}">Apply styles Dynamically</div>
+    </div>
+
+
+    <div class="col">
+      <h1>ngModel</h1>
+      <p>This is related to the Form</p>
+      <input type="text" [(ngModel)]="name" name="name" >
+      <p>{{name}}</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="container">
+  <h2>Custom Directive</h2>
+
+  <!-- <p appHighlight>HighLight me!</p> -->
+
+  <p appHighlight>Hover me</p>
+</div>
