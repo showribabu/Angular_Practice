@@ -1,15 +1,63 @@
 <div class="container col-md-6">
 <h2>Form</h2>
+  <form action="">
+          <div class="form-floating text-dark my-5">
+            <!--   template variable -->
+            <!-- <input type="text" class="form-control" placeholder="Enter name" #username> -->
+            <input type="text" class="form-control " placeholder="Enter name" >
+            <label for="" class="form-label">Name</label>
+          </div>
 
-<form action="">
+          <div class="form-floating text-dark my-3">
+            <input type="mail" class="form-control" placeholder="Enter mail">
+            <label for="form-label">Email</label>
+          </div>
 
-  <div class="form-group">
+          <div class="mt-5 p-3 text-center">
+            <button type="submit" class="btn btn-primary text-white">Submit</button>
+          </div>
 
-    <label for="" class="form-label">
-      Name
-    </label>
-    <input type="text" class="form-control">
+    </form>
 
-  </div>
-</form>
 </div>
+
+
+<!-- <button class="btn btn-danger text-white"  (click)="onsendmsg()">Send msg to Parent</button> -->
+
+
+
+<!-- <h2>Single-slot content projection</h2>
+<ng-content></ng-content>
+
+
+<h2>Multi-slot content projection</h2>
+
+    Default:
+    <ng-content select="[maybe]"></ng-content>
+
+    Question:
+    <ng-content select="[ok]"></ng-content> -->
+
+
+
+
+    <!-- Property binding -->
+    <!-- <img [src]="imgSrc" alt="IMage from binding"> -->
+
+    <!-- Attribute Binding -->
+
+    <p class="container  p-3 col-md-6 bg-dark  mt-5 rounded-4 text-center text-uppercase border border-warning" [style.color]="textColor">{{name}}</p>
+
+    <!-- Pipes -->
+    <p>{{today | date:'short'}}</p>
+
+  <!-- Example: Format a number as decimal -->
+<p>{{ price | number:'1.2-2' }}</p>
+
+
+<p>{{cmdd ? ('true'|uppercase) : false}}</p>
+
+<!-- <p>{{username.value}}</p> -->
+
+<!-- <button type="button" class="btn btn-danger text-white"  (click)="dataname(username.value)">Click</button> -->
+

@@ -2,7 +2,18 @@
   <h2>Angular Introduction</h2>
 </div>
 
-<p class="container  p-3 col-md-6 bg-dark text-white mt-5 rounded-4 text-center text-uppercase border border-warning text-white">{{name}}</p>
+<p class="container  p-3 col-md-6 bg-dark  mt-5 rounded-4 text-center text-uppercase border border-warning " [style.color]="textColor">{{name}}</p>
+
+<!--
+<div>
+  <h3>Current Value: {{ inputValue }}</h3>
+  <h3>Previous Value: {{ previousValue }}</h3>
+  <button type="button" (click)="onresponsed()" class="btn btn-warning text-white">Click to change</button>
+  <button type="button" (click)="onreresponse()" class="btn btn-warning text-white">Click to Reset</button>
+
+</div> -->
+
+
 
 <div class="container col-md-6 p-4  my-5 border border-success bg-secondary rounded-5">
   <h2 class="p-2 text-center  ">Signup Form</h2>

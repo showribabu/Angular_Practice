@@ -1,7 +1,40 @@
 
 <div class="container-fluid d-flex bg-dark p-1">
-  <a routerLink="/signup" class="button nav-link p-2 bg-white text-dark mx-5 rounded ">Home</a>
+  <a routerLink="/" class="button nav-link p-2 bg-white text-dark mx-5 rounded ">Home</a>
+  <a routerLink="/signup" class="button nav-link p-2 bg-white text-dark mx-5 rounded ">Signup</a>
   <a routerLink="/test" class="button nav-link p-2 bg-white text-dark mx-5 rounded">Testing</a>
 </div>
 
+<!-- <h2>Child message:{{childmsg}}</h2>
+
+  <app-test (messageEvent)="fromchild($event)">
+
+    <p ok>
+      Is content projection cool?
+    </p>
+
+    <p maybe>Let's learn about content projection!</p>
+
+  </app-test> -->
+
+
+
+
+
+<!--
+<button type="button" (click)="onresponsed()" class="btn btn-warning text-white">Click to change</button>
+<button type="button" (click)="onreresponse()" class="btn btn-warning text-white">Click to Reset</button> -->
+
+
+    <div>
+      <h3>Select a dynamic component:</h3>
+      <button (click)="loadComponentA()">Load Component A</button>
+      <button (click)="loadComponentB()">Load Component B</button>
+    </div>
+    <div [ngComponentOutlet]="dynamicComponent"></div>
+
+
+
+
 <router-outlet></router-outlet>
+
