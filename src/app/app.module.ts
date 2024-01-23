@@ -8,6 +8,8 @@ import { TestComponent } from './test/test.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesExampleComponent } from './directives-example/directives-example.component';
 import { HighlightDirective } from './highlight.directive';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { HighlightDirective } from './highlight.directive';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+
 
 
   ],

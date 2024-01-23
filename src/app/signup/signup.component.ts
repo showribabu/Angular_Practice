@@ -2,6 +2,7 @@ import { Component, OnInit,SimpleChange,OnChanges,Input, SimpleChanges } from '@
 import { FormsModule } from '@angular/forms';
 import { SignUp } from '../sign-up';
 import { JsonPipe } from '@angular/common';
+import { SignupSeriveService } from '../signup-serive.service';
 
 
 @Component({
@@ -48,9 +49,31 @@ textColor='red';
 
 signupModel= new SignUp('','');
 
-onSubmit():void{
+responseData:any;
+isSuccess=false;
 
-  alert(this.signupModel.name + '\n' +this.signupModel.password);
+
+constructor(private signupService:SignupSeriveService){}
+onSignup():void{
+
+  // alert(this.signupModel.name + '\n' +this.signupModel.password);
+
+  this.signupService.onSignup(this.signupModel).subscribe(
+    (data:any) => {
+      // console.log('Response from server:', data);
+      this.responseData = data;
+      if (this.responseData.message=='User already existed with the name'){
+        this.isSuccess=false;
+      }
+      else{
+        this.isSuccess=true;
+      }
+    }
+  );
 }
+
+
+
+
 
 }

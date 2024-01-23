@@ -1,25 +1,30 @@
 <div class="container col-md-6">
-<h2>Form</h2>
-  <form action="">
+<h2>Login Form</h2>
+  <form action="" (ngSubmit)="onLogin()"  #loginData="ngForm">
+
           <div class="form-floating text-dark my-5">
             <!--   template variable -->
             <!-- <input type="text" class="form-control" placeholder="Enter name" #username> -->
-            <input type="text" class="form-control " placeholder="Enter name" >
+            <input type="text" class="form-control " placeholder="Enter name"  name="name" [(ngModel)]="loginModel.name">
             <label for="" class="form-label">Name</label>
           </div>
 
           <div class="form-floating text-dark my-3">
-            <input type="mail" class="form-control" placeholder="Enter mail">
-            <label for="form-label">Email</label>
+            <input type="text" class="form-control" placeholder="Enter password" name="password" [(ngModel)]="loginModel.password">
+            <label for="form-label">password</label>
           </div>
 
           <div class="mt-5 p-3 text-center">
-            <button type="submit" class="btn btn-primary text-white">Submit</button>
+            <button type="submit" class="btn btn-primary text-white">Login</button>
           </div>
 
     </form>
-
+    <p>{{loginData.value |json}}</p>
+    <p>{{loginModel |json}}</p>
+    <p>{{logindata.message}}</p>
 </div>
+
+
 
 
 <!-- <button class="btn btn-danger text-white"  (click)="onsendmsg()">Send msg to Parent</button> -->
@@ -46,16 +51,16 @@
 
     <!-- Attribute Binding -->
 
-    <p class="container  p-3 col-md-6 bg-dark  mt-5 rounded-4 text-center text-uppercase border border-warning" [style.color]="textColor">{{name}}</p>
+    <!-- <p class="container  p-3 col-md-6 bg-dark  mt-5 rounded-4 text-center text-uppercase border border-warning" [style.color]="textColor">{{name}}</p>
 
-    <!-- Pipes -->
-    <p>{{today | date:'short'}}</p>
+    Pipes -->
+    <!-- <p>{{today | date:'short'}}</p> -->
 
   <!-- Example: Format a number as decimal -->
-<p>{{ price | number:'1.2-2' }}</p>
+<!-- <p>{{ price | number:'1.2-2' }}</p> -->
 
-
-<p>{{cmdd ? ('true'|uppercase) : false}}</p>
+<!--
+<p>{{cmdd ? ('true'|uppercase) : false}}</p> -->
 
 <!-- <p>{{username.value}}</p> -->
 
