@@ -9,15 +9,15 @@ import { TestComponent } from './test/test.component';
 })
 export class AppComponent {
   title='Angular'
-  name='showri'
 
-  onresponsed(){
-    this.name="ONE";
-  }
 
-  onreresponse(){
-  this.name="TWO";
-}
+//   onresponsed(){
+//     this.name="ONE";
+//   }
+
+//   onreresponse(){
+//   this.name="TWO";
+// }
 
 
 childmsg:string ='';
@@ -40,5 +40,9 @@ dynamicComponent: any; // The type will be the component type
   }
 
 
+  arr=JSON.stringify([{name:"showri"},{name:'babu'},{name:'kanta'}]);
+
+  name='showri'
+  age=20;
 
 }

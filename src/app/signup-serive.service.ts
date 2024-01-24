@@ -12,6 +12,8 @@ export class SignupSeriveService {
   _onSignup= 'http://127.0.0.1:2000/onSignup';
   _onLogin = 'http://127.0.0.1:2000/onLogin';
 
+
+
   onSignup(signupModel:SignUp):any{
 
     // alert('data to the Service');
@@ -36,5 +38,6 @@ export class SignupSeriveService {
     return this.http.get(this._onLogin,{params:Queryparams});
 
   }
+
 
 }

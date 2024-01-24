@@ -5,6 +5,8 @@ import { SignupSeriveService } from '../signup-serive.service';
 //Router
 import { Router } from '@angular/router';
 
+import { AuthService } from '../auth.service';
+
 
 @Component({
   selector: 'app-test',
@@ -43,9 +45,7 @@ export class TestComponent {
 
   loginModel = new Login('', '');
 
-  constructor(private loginService:SignupSeriveService,
-    private router :Router){}
-
+  constructor(private loginService:SignupSeriveService,private router :Router, private authService:AuthService ){}
   onLogin():void{
     // alert(this.loginModel.name + ' ' + this.loginModel.password);
     this.loginService.onLogin(this.loginModel).subscribe(
@@ -54,7 +54,7 @@ export class TestComponent {
         this.logindata=data;
         if(this.logindata.message=='LoginSuccess'){
 //navigate to new template
-
+          this.authService.isLogin();
           this.router.navigate(['/directivesExample']);
         }
       }

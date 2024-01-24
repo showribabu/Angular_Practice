@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { DirectivesExampleComponent } from './directives-example/directives-example.component';
 import { HighlightDirective } from './highlight.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { NaviagationComponent } from './naviagation/naviagation.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     TestComponent,
     DirectivesExampleComponent,
     HighlightDirective,
+    NaviagationComponent,
 
   ],
   imports: [
@@ -25,9 +27,6 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-
-
-
   ],
 
   providers: [],

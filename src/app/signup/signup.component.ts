@@ -4,8 +4,11 @@ import { SignUp } from '../sign-up';
 import { JsonPipe } from '@angular/common';
 import { SignupSeriveService } from '../signup-serive.service';
 
+import {Router} from '@angular/router'
+
 
 @Component({
+  // standalone:true,
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
@@ -53,7 +56,7 @@ responseData:any;
 isSuccess=false;
 
 
-constructor(private signupService:SignupSeriveService){}
+constructor(private signupService:SignupSeriveService,private router:Router){}
 onSignup():void{
 
   // alert(this.signupModel.name + '\n' +this.signupModel.password);
@@ -67,6 +70,9 @@ onSignup():void{
       }
       else{
         this.isSuccess=true;
+        setTimeout(()=>{
+          this.router.navigate(['/test']);
+        },1000)
       }
     }
   );

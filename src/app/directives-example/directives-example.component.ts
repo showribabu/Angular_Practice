@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
+import { Int32 } from 'mongodb';
 
 @Component({
   selector: 'app-directives-example',
@@ -22,6 +25,14 @@ value='c';
 isSpecial=true;
 isSpecial1=false;
 
-name :string='showri';
+name:string='showri'
 
+
+
+
+constructor(private authService: AuthService,private router:Router){};
+logout():void{
+  this.authService.isLogout();
+  this.router.navigate(['/test']);
+}
 }

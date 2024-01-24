@@ -1,9 +1,26 @@
 
 <div class="container-fluid d-flex bg-dark p-1">
-  <a routerLink="/" class="button nav-link p-2 bg-white text-dark mx-5 rounded ">Home</a>
-  <a routerLink="/signup" class="button nav-link p-2 bg-white text-dark mx-5 rounded ">Signup</a>
-  <a routerLink="/test" class="button nav-link p-2 bg-white text-dark mx-5 rounded">Testing</a>
-  <a routerLink="/directivesExample" class="button nav-link p-2 bg-white text-dark mx-5 rounded">Directives</a>
+  <a routerLink="/"                  routerLinkActive="activate"  class="button nav-link p-2 bg-white text-dark mx-5 rounded ">Home</a>
+  <a routerLink="/signup"            routerLinkActive="activate"  class="button nav-link p-2 bg-white text-dark mx-5 rounded ">Signup</a>
+  <a routerLink="/test"              routerLinkActive="activate"  class="button nav-link p-2 bg-white text-dark mx-5 rounded">Testing</a>
+  <a routerLink="/directivesExample" routerLinkActive="activate"  class="button nav-link p-2 bg-white text-dark mx-5 rounded">Directives</a>
+  <a routerLink="/open"              routerLinkActive="activate"  class="button nav-link p-2 bg-white text-dark mx-5 rounded">Open Form</a> <!--This is similar to /Signup -->
+
+  <!--
+
+    1) routing parameters
+     <a  [routerLink] ="['/navigation',arr]" routerLinkActive="activate" class="button nav-link p-2 bg-white text-dark mx-5 rounded">Navigation</a>
+
+    -->
+
+    <!-- 2) Query parameters -->
+
+    <a  [routerLink] ="['/navigation',{'name':name,'age':age}]" routerLinkActive="activate" class="button nav-link p-2 bg-white text-dark mx-5 rounded">Navigation</a>
+
+  <!-- <ul>
+    <li><a routerLink="/signup" routerLinkActive="active" ariaCurrentWhenActive="page">First Component</a></li>
+    <li><a routerLink="/test" routerLinkActive="active" ariaCurrentWhenActive="page">Second Component</a></li>
+  </ul> -->
 
 </div>
 
@@ -28,7 +45,7 @@
 <button type="button" (click)="onreresponse()" class="btn btn-warning text-white">Click to Reset</button> -->
 
 <!-- Dynamic content loading.. -->
-<!-- 
+<!--
     <div>
       <h3>Select a dynamic component:</h3>
       <button (click)="loadComponentA()">Load Component A</button>
@@ -38,6 +55,16 @@
  -->
 
 
+<!--
+ <h1>Angular Router App</h1>
+<nav>
+  <ul>
+    <li><a routerLink="/signup" routerLinkActive="active" ariaCurrentWhenActive="page">First Component</a></li>
+    <li><a routerLink="/test" routerLinkActive="active" ariaCurrentWhenActive="page">Second Component</a></li>
+  </ul>
+</nav> -->
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
 
 <router-outlet></router-outlet>
 
